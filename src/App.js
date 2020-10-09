@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react'
+import { createStore } from 'redux'
 import Header from './Resume/Header'
 import Skills from './Resume/Skills'
 import './App.css'
 
 function App() {
-
   const [ dude ] = useState({
     "profile": {
         "name": "Mario",
@@ -13,11 +13,15 @@ function App() {
         "bio": "Web Developer from Costa Rica."
     },
     "skills": [
-        "Great problem solving and debugging skills",
-        "Always looking to improve and learn",
-        "3+ years of experience working with JS, HTML and CSS",
-        "Experience with VUE",
-        "Experience with TDD using Jest"
+        "Great problem solving and debugging skills.",
+        "Always looking to improve and learn.",
+        "3+ years of experience working with JS, HTML and CSS.",
+        "Experience working with Webpack",
+        "Experience working with Gulp",
+        "Experience with VUE/VUEX",
+        "Knowledge of React/Redux",
+        "Experience with TDD using Jest.",
+        "Experience working with and teaching Git"
     ],
     "webProfiles": [
       {

@@ -11,14 +11,19 @@ const Wrapper = styled.div`
     width: 100%;
     justify-content: center;
     padding: 40px 0px;
+    position: sticky;
+    top: 0;
+    -webkit-box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
+    box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
     @media (min-width: 768px) {
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 `
 const Name = styled.p`
     color: ${COLORS.purple};
-    font-weight: bold;
-    font-size: 28px;
+    font-size: 36px;
+    font-family: 'Anton', sans-serif;
 `;
 const Bio = styled.p`
     color: ${COLORS.purple};
@@ -35,11 +40,11 @@ const LeftSideContainer = styled.div`
     }
 `
 const RightSideContainer = styled.div`
-
+    margin-right: 20px;
 `
 
 function Header(props){
-    
+
     const {
         name,
         bio,
@@ -49,8 +54,8 @@ function Header(props){
     return(
         <Wrapper>
             <LeftSideContainer>
-                <Name>{name}</Name>
-                <Bio> {bio} </Bio>
+                <Name>{name ? name : 'name'}</Name>
+                <Bio> {bio ? bio : 'lorem ipsum '}</Bio>
             </LeftSideContainer>
             <RightSideContainer>
                 <Avatar
