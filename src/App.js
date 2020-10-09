@@ -1,7 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react'
+import styled from 'styled-components'
 import { createStore } from 'redux'
 import Header from './Resume/Header'
 import Skills from './Resume/Skills'
+import { COLORS } from './Resume/Colors.js'
 import './App.css'
 
 function App() {
@@ -56,6 +58,11 @@ function App() {
     loadData();
   },[])
 
+  const Footer = styled.p`
+    display: block;
+    background-color: ${COLORS.vanilla}
+  `;
+
   return (
     <Fragment>
       <Header
@@ -63,6 +70,9 @@ function App() {
       <Skills
         skills={dude.skills}
       />
+      <Footer>
+        Feel free to reach me at <a href="mailto:mariofph@gmail.com">mariofph@gmail.com</a>
+      </Footer>
     </Fragment>
   );
 }

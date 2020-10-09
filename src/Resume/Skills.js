@@ -26,7 +26,7 @@ const List = styled.ul`
 `;
 const Skill = styled.li`
     width: fit-content;
-    color: white;
+    color: ${COLORS.vanilla};
     font-size: 19px;
     margin-bottom: 10px;
     @media (min-width: 768px){
