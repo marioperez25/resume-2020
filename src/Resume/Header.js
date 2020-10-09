@@ -24,7 +24,7 @@ const Name = styled.p`
     font-family: 'Anton', sans-serif;
 `;
 const Bio = styled.p`
-    color: ${COLORS.pink};
+    color: ${COLORS.pink1};
     font-weight: bold;
     font-size: 16px;
     max-width: 500px;
