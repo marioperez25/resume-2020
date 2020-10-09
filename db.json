@@ -1,0 +1,23 @@
+{
+    "profile": {
+        "name": "Mario",
+        "lastName": "Perez",
+        "avatar": "https://avatars1.githubusercontent.com/u/8365575?s=460&u=8556da9f8f81b116fc20f928ba421155b59ee6db&v=4",
+        "bio": "Web Developer from Costa Rica."
+    },
+    "skills": [
+        "Experience working with js",
+        "Experience working with css",
+        "Experience working with html"
+    ],
+    "experience": [
+        {
+            "companyName": "company 1",
+            "entryDate": "25/07/2009"
+        },
+        {
+            "companyName": "company 2",
+            "entryDate": "25/07/2009"
+        }
+    ]
+}
