@@ -35,12 +35,14 @@ const LeftSideContainer = styled.div`
     margin-bottom: 10px;
     @media (min-width: 768px) {
         text-align: left;
-        margin-right: 20px;
+        margin-left: 20px;
         line-height: 2;
+        padding-top: 40px;
     }
 `
 const RightSideContainer = styled.div`
     margin-right: 20px;
+    
 `
 
 function Header(props){

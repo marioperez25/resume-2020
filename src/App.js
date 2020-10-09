@@ -1,9 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import styled from 'styled-components'
-import { createStore } from 'redux'
+// import { createStore } from 'redux'
 import Header from './Resume/Header'
 import Skills from './Resume/Skills'
-import { COLORS } from './Resume/Colors.js'
+import Footer from './Resume/Footer'
 import './App.css'
 
 function App() {
@@ -48,20 +47,15 @@ function App() {
 });
   const API_URL = 'https://api.github.com/users/marioperez25'
   const [ apiData, setApiData] = useState({})
-  const loadData = async () => {
-    const response = await fetch(API_URL);
+  const profileLoader = async (api) => {
+    const response = await fetch(api);
     const data = await response.json();
     setApiData(data);
   }
-
+  
   useEffect(()=>{
-    loadData();
+    profileLoader(API_URL);
   },[])
-
-  const Footer = styled.p`
-    display: block;
-    background-color: ${COLORS.vanilla}
-  `;
 
   return (
     <Fragment>
@@ -70,9 +64,7 @@ function App() {
       <Skills
         skills={dude.skills}
       />
-      <Footer>
-        Feel free to reach me at <a href="mailto:mariofph@gmail.com">mariofph@gmail.com</a>
-      </Footer>
+      <Footer/>
     </Fragment>
   );
 }

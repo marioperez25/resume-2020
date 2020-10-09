@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const AvatarContainer = styled.img`
     display: block;
     height: 195px;
+    width: 195px;
     margin: auto;
     border: 5px solid #3e0c11;
     border-radius: 50%;
