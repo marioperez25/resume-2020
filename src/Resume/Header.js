@@ -20,13 +20,11 @@ const Name = styled.p`
     font-weight: bold;
     font-size: 28px;
 `;
-
 const Bio = styled.p`
     color: ${COLORS.purple};
     font-weight: bold;
     font-size: 16px;
 `;
-
 const LeftSideContainer = styled.div`
     text-align: center;
     margin-bottom: 10px;
@@ -36,7 +34,6 @@ const LeftSideContainer = styled.div`
         line-height: 2;
     }
 `
-
 const RightSideContainer = styled.div`
 
 `
@@ -46,12 +43,12 @@ function Header(props){
     return(
         <Wrapper>
             <LeftSideContainer>
-                <Name>{props.profile.name} {props.profile.lastName}</Name>
+                <Name>{props.profile.name}</Name>
                 <Bio> {props.profile.bio} </Bio>
             </LeftSideContainer>
             <RightSideContainer>
                 <Avatar
-                    imageUrl={props.profile.avatar}
+                    imageUrl={props.profile.avatar_url}
                 />
             </RightSideContainer>
         </Wrapper>

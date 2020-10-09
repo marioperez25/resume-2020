@@ -16,8 +16,8 @@ function Header(props){
     return(
         <Fragment>
             <AvatarContainer
-                    src={props.imageUrl}
-                    alt="avatar"
+                src={props.imageUrl}
+                alt="avatar"
             />
         </Fragment>
     )

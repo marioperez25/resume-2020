@@ -6,9 +6,21 @@
         "bio": "Web Developer from Costa Rica."
     },
     "skills": [
-        "Experience working with js",
-        "Experience working with css",
-        "Experience working with html"
+        "Great problem solving and debugging skills",
+        "Always looking to improve and learn",
+        "3+ years of experience working with JS, HTML and CSS",
+        "Experience with VUE",
+        "Experience with TDD using Jest"
+    ],
+    "webProfiles": [
+      {
+        "name": "stackoverflow",
+        "apiUrl": "https://api.github.com/users/marioperez25"
+      },
+      {
+        "name": "github",
+        "apiUrl": "https://stackoverflow.com/users/6465591/mario-perez"
+      }
     ],
     "experience": [
         {

@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import Header from './Resume/Header'
 import Skills from './Resume/Skills'
 import './App.css'
@@ -19,6 +19,16 @@ function App() {
         "Experience with VUE",
         "Experience with TDD using Jest"
     ],
+    "webProfiles": [
+      {
+        "name": "stackoverflow",
+        "apiUrl": "https://api.github.com/users/marioperez25"
+      },
+      {
+        "name": "github",
+        "apiUrl": "https://stackoverflow.com/users/6465591/mario-perez"
+      }
+    ],
     "experience": [
         {
             "companyName": "company 1",
@@ -30,11 +40,23 @@ function App() {
         }
     ]
 });
+  const API_URL = 'https://api.github.com/users/marioperez25'
+  const [ apiData, setApiData] = useState({})
+  const loadData = async () => {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+    setApiData(data);
+  }
+
+  useEffect(()=>{
+    loadData();
+  },[])
 
   return (
+    
     <Fragment>
       <Header
-        profile={dude.profile}/>
+        profile={apiData}/>
       <Skills
         skills={dude.skills}
       />
