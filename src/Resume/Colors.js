@@ -3,10 +3,9 @@ BRAND COLORS:
 **/
 
 export const COLORS = {
-    graphite: "#302a2c",
-    gray: "#a0a4ab",
-    pink: "#d29ea4",
-    red: "#d29ea4",
-    purple: "#3e0c11",
-    vanilla: "#f3e5ab"
+    green: '#99B898',
+    pink1: '#FECEAB',
+    pink2: '#FF847C',
+    red: '#E84A5F',
+    dark: '#2A363B'
 }

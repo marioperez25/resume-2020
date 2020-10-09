@@ -12,14 +12,20 @@ const Contact = styled.p`
 `;
 const Anchor = styled.a`
     color: ${COLORS.purple};
+    &:hover {
+        color: ${COLORS.gray};
+    }
 `;
 
 export default function Footer(props){
     return (
         <Fragment>
             <Contact>
-                Feel free to reach me at <Anchor href="mailto:mariofph@gmail.com">mariofph@gmail.com</Anchor>
+                <p>Feel free to reach me at <Anchor href="mailto:mariofph@gmail.com">mariofph@gmail.com <span role="img" aria-label="none">🚀</span></Anchor></p>
+                <p>this site was built using react+hooks</p>
+                <p>comming soon: redux</p>
             </Contact>
+            
         </Fragment>
     )
 }

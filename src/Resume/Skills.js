@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { COLORS } from './Colors'
 
 const SkillsContainer = styled.section`
-    background-color: ${COLORS.purple};
+    background-color: ${COLORS.green};
     padding: 30px 30px;
     @media(min-width: 768px){
         padding: 70px 30px;

@@ -5,14 +5,12 @@ import { COLORS } from './Colors'
 
 const Wrapper = styled.div`
     display: flex;
-    background-color: ${COLORS.pink};
+    background-color: ${COLORS.dark};
     flex-direction: column;
     margin: auto;
     width: 100%;
     justify-content: center;
     padding: 40px 0px;
-    position: sticky;
-    top: 0;
     -webkit-box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
     -moz-box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
     box-shadow: 0px 11px 5px -1px rgba(0,0,0,0.33);
@@ -21,14 +19,16 @@ const Wrapper = styled.div`
     }
 `
 const Name = styled.p`
-    color: ${COLORS.purple};
+    color: ${COLORS.red};
     font-size: 36px;
     font-family: 'Anton', sans-serif;
 `;
 const Bio = styled.p`
-    color: ${COLORS.purple};
+    color: ${COLORS.pink};
     font-weight: bold;
     font-size: 16px;
+    max-width: 500px;
+    margin: 15px auto 15px;;
 `;
 const LeftSideContainer = styled.div`
     text-align: center;
@@ -37,12 +37,12 @@ const LeftSideContainer = styled.div`
         text-align: left;
         margin-left: 20px;
         line-height: 2;
-        padding-top: 40px;
     }
 `
 const RightSideContainer = styled.div`
-    margin-right: 20px;
-    
+    @media(min-width: 768px){
+        margin-right: 20px;
+    }
 `
 
 function Header(props){
