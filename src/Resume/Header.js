@@ -39,7 +39,6 @@ const RightSideContainer = styled.div`
 `
 
 function Header(props){
-    console.log(props);
     return(
         <Wrapper>
             <LeftSideContainer>

@@ -53,7 +53,6 @@ function App() {
   },[])
 
   return (
-    
     <Fragment>
       <Header
         profile={apiData}/>

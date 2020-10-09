@@ -30,7 +30,7 @@ export default function Skills(props){
     const skills = (props.skills).map(
         (skill,index) => 
             <Skill
-                id={index}
+                key={index}
             >
                 {skill}
             </Skill>
