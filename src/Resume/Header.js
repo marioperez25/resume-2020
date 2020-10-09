@@ -39,15 +39,22 @@ const RightSideContainer = styled.div`
 `
 
 function Header(props){
+    
+    const {
+        name,
+        bio,
+        avatar_url
+    } = props.profile;
+
     return(
         <Wrapper>
             <LeftSideContainer>
-                <Name>{props.profile.name}</Name>
-                <Bio> {props.profile.bio} </Bio>
+                <Name>{name}</Name>
+                <Bio> {bio} </Bio>
             </LeftSideContainer>
             <RightSideContainer>
                 <Avatar
-                    imageUrl={props.profile.avatar_url}
+                    imageUrl={avatar_url}
                 />
             </RightSideContainer>
         </Wrapper>

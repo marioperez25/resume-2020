@@ -2,17 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { COLORS } from './Colors'
 
-
-
 const SkillsContainer = styled.section`
     background-color: ${COLORS.purple};
     padding: 15px;
 `;
-
 const Intro = styled.h3`
     color: ${COLORS.pink};
 `;
-
 const List = styled.ul`
     list-style-type: lower-alpha;
     display: block;
@@ -20,7 +16,6 @@ const List = styled.ul`
     margin: auto;
     padding-inline-start: 0px;
 `;
-
 const Skill = styled.li`
     color: white;
     list-style: inside;
