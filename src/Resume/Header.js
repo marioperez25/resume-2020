@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Avatar from './Avatar'
 import { COLORS } from './Colors'
 
-const Wrapper = styled.div`
+const HeaderWrapper = styled.div`
     display: flex;
     background-color: ${COLORS.dark};
     flex-direction: column;
@@ -18,19 +18,15 @@ const Wrapper = styled.div`
         flex-direction: row-reverse;
     }
 `
-const Name = styled.p`
+const Name = styled.h1`
     color: ${COLORS.red};
     font-size: 36px;
     font-family: 'Anton', sans-serif;
 `;
-const Bio = styled.p`
-    color: ${COLORS.pink1};
-    font-weight: bold;
-    font-size: 16px;
-    max-width: 500px;
-    margin: 15px auto 15px;;
-`;
 const LeftSideContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     margin-bottom: 10px;
     @media (min-width: 768px) {
@@ -44,27 +40,30 @@ const RightSideContainer = styled.div`
         margin-right: 20px;
     }
 `
-
+const Role = styled.h2`
+    font-size: 20px;
+    color: white;
+    font-family: 'Anton', sans-serif;
+`;
 function Header(props){
 
     const {
         name,
-        bio,
         avatar_url
     } = props.profile;
 
     return(
-        <Wrapper>
+        <HeaderWrapper>
             <LeftSideContainer>
-                <Name>{name ? name : 'name'}</Name>
-                <Bio> {bio ? bio : 'lorem ipsum '}</Bio>
+                <Name>{name ? name : 'loading...'}</Name>
+                <Role>Web Developer</Role>
             </LeftSideContainer>
             <RightSideContainer>
                 <Avatar
                     imageUrl={avatar_url}
                 />
             </RightSideContainer>
-        </Wrapper>
+        </HeaderWrapper>
     )
 }
 
