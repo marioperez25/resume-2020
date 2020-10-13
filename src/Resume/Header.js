@@ -41,7 +41,7 @@ const RightSideContainer = styled.div`
     }
 `
 const Role = styled.h2`
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     font-family: 'Anton', sans-serif;
 `;

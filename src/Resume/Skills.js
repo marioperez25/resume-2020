@@ -5,6 +5,7 @@ import ListItem from './StyledComponents/ListItem'
 import H3 from './StyledComponents/H3'
 
 export default function Skills(props){
+    
     const skills = props.skills ? (props.skills).map(
         (skill,index) => 
             <ListItem
@@ -13,6 +14,7 @@ export default function Skills(props){
                 {skill}
             </ListItem>
     ) : []
+
     return(
         <SectionWrapper>
             <H3>Skills</H3>

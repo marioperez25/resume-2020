@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SectionWrapper from './StyledComponents/SectionWrapper'
 import UnorderedList from './StyledComponents/UnorderedList'
 import ListItem from './StyledComponents/ListItem'
 import H3 from './StyledComponents/H3'
+import Phone from './Phone'
+import Email from './Email'
 
 export default function Contact(props){
     const { 
@@ -18,24 +20,42 @@ export default function Contact(props){
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"            
-                >{profile.name}</a>
+            >{profile.name}</a>
         </ListItem>
     ) : []
 
     return(
-        <SectionWrapper>
+        <Fragment>
+            <SectionWrapper>
             <H3>Contact Information</H3>
+            <p>
+                <span
+                    role="img"
+                    aria-label=""
+                >📱 </span>
+                Phone Number:
+                <Phone
+                    phone={phone}
+                />
+            </p>
+            <p>
+            <span
+                role="img"
+                aria-label=""
+            >📮 </span>
+                Email: 
+                <Email
+                    email={email}
+                />
+            </p>
+        </SectionWrapper>
+        <SectionWrapper>
+            <H3>Follow me at</H3>
             <UnorderedList>
-                <ListItem><span role="img" aria-label="">📱</span> Phone Number:
-                    <a href={`tel:+${phone}`}>
-                        {phone.replace(/\D+/g, '')
-                        .replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')}
-                    </a>
-                </ListItem>
-                <ListItem><span role="img" aria-label="">📮</span> Email: <a href={`mailto:+${email}`}>{email}</a></ListItem>
                 {profiles}
             </UnorderedList>
         </SectionWrapper>
+        </Fragment>
     )
 
 }
