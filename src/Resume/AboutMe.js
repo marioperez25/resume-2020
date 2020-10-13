@@ -14,7 +14,6 @@ const AboutMeContainer = styled.section`
     }
 `;
 
-
 export default function Bio(props){
     return(
         <AboutMeContainer>

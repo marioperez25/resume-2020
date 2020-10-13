@@ -10,15 +10,17 @@ export default function Contact(props){
         phone 
     } = props.contact
 
-    const profiles = props.devProfiles.map(
-        profile => <ListItem>
+    const profiles = props.devprofiles ? props.devprofiles.map(
+        (profile, index) => 
+        <ListItem
+            key={index}>
             <a 
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"            
                 >{profile.name}</a>
         </ListItem>
-    )
+    ) : []
 
     return(
         <SectionWrapper>

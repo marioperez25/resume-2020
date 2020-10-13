@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { COLORS } from '../Colors'
 
 const Navigation = styled.nav`
-    width: 100%;
-    height: 50px;
     background-color: ${COLORS.dark};
     justify-content: center;
     display: flex;

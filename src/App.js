@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import { createStore } from 'redux'
+// import { createStore } from 'redux'
+import profileLoader from './Resume/Services/profileLoader'
 import Header from './Resume/Header'
 import Resume from './Resume/Resume'
 import Footer from './Resume/Footer'
@@ -7,16 +8,10 @@ import './App.css'
 
 function App() {
   const GIT_PROFILE_API = 'https://api.github.com/users/marioperez25'
-  const JSONbin = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/1'
+  const JSONbin = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/2'
 
   const [ gitAPI, setgitAPI] = useState({})
   const [ jsonBin, setJsonBin ] = useState({})
-  const profileLoader = async (api, setter) => {
-    const response = await fetch(api)
-    const data = await response.json()
-    setter(data)
-  }
-
   const [ resume ] = useState({
     "contact" : {
         "phone": "50685681492",
@@ -75,6 +70,7 @@ function App() {
         jsonBin={jsonBin}
         bio={gitAPI.bio}
       />
+
       <Footer/>
     </Fragment>
   );

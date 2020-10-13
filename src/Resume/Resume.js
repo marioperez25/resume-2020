@@ -13,11 +13,17 @@ import Contact from './Contact'
 
 export default function Resume(props){
     const {
-        skills,
         contact,
-        devProfiles,
         experience
     } = props.resume;
+
+    const {
+        contact_info,
+        skills,
+        devprofiles
+    } = props.jsonBin
+
+    console.log(contact_info)
 
     return(
         <Router>
@@ -37,7 +43,7 @@ export default function Resume(props){
                 <Route path="/contact">
                     <Contact
                         contact={contact}
-                        devProfiles={devProfiles}    
+                        devprofiles={devprofiles}    
                     />
                 </Route>
                 <Route path="/">

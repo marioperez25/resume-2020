@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const H3 = styled.h3`
     border-bottom: 1px solid;
+    font-size: 30px;
     margin-bottom: 5px;
     padding-bottom: 5px;
 `;
