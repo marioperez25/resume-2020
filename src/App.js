@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   const GIT_PROFILE_API = 'https://api.github.com/users/marioperez25'
-  const JSONbin = 'https://jsonbin.io/5f84d311302a837e95789669/9'
+  const JSONbin = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/9'
 
   const [ gitAPI, setgitAPI] = useState({})
   const [ jsonBin, setJsonBin ] = useState({})
