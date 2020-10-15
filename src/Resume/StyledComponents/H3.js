@@ -5,6 +5,10 @@ const H3 = styled.h3`
     font-size: 30px;
     margin-bottom: 5px;
     padding-bottom: 5px;
+    @media (min-width: 768px) {
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
 `;
 
 export default H3;

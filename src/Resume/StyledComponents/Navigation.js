@@ -16,7 +16,7 @@ const Navigation = styled.nav`
         text-decoration: none;
         background-color: ${COLORS.dark};
         &:hover {
-            color: ${COLORS.red}
+            color: ${COLORS.lightBlue}
         }
     }
 `;

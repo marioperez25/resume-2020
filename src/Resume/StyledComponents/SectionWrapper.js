@@ -6,7 +6,7 @@ const SectionWrapper = styled.section`
     width: fit-content;
     margin: auto;
     @media(min-width: 768px){
-        padding: 30px 30px;
+        padding: 0px 30px;
     }
     font-family: 'Cabin', sans-serif;
     &:first-of-type {

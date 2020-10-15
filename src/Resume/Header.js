@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
     }
 `
 const Name = styled.h1`
-    color: ${COLORS.red};
+    color: ${COLORS.lightBlue};
     font-size: 36px;
     font-family: 'Anton', sans-serif;
 `;

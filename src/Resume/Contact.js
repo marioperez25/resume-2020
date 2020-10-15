@@ -8,9 +8,9 @@ import Email from './Email'
 
 export default function Contact(props){
     const { 
-        email,
-        phone 
-    } = props.contact
+        email = '',
+        phone =''
+    } = props.contact || {}
 
     const profiles = props.devprofiles ? props.devprofiles.map(
         (profile, index) => 
@@ -27,33 +27,23 @@ export default function Contact(props){
     return(
         <Fragment>
             <SectionWrapper>
-            <H3>Contact Information</H3>
-            <p>
-                <span
-                    role="img"
-                    aria-label=""
-                >📱 </span>
-                Phone Number:
-                <Phone
-                    phone={phone}
-                />
-            </p>
-            <p>
-            <span
-                role="img"
-                aria-label=""
-            >📮 </span>
-                Email: 
-                <Email
-                    email={email}
-                />
-            </p>
-        </SectionWrapper>
-        <SectionWrapper>
-            <H3>Follow me at</H3>
-            <UnorderedList>
-                {profiles}
-            </UnorderedList>
+                <H3>Contact Information</H3>
+                <p>Phone Number:
+                    <Phone
+                        phone={phone}
+                    />
+                </p>
+                <p>Email: 
+                    <Email
+                        email={email}
+                    />
+                </p>
+            </SectionWrapper>
+            <SectionWrapper>            
+                <H3>Feel free to follow</H3>
+                <UnorderedList>
+                    {profiles}
+                </UnorderedList>
         </SectionWrapper>
         </Fragment>
     )
