@@ -28,16 +28,14 @@ export default function Contact(props){
         <Fragment>
             <SectionWrapper>
                 <H3>Contact Information</H3>
-                <p>Phone Number:
-                    <Phone
-                        phone={phone}
-                    />
-                </p>
-                <p>Email: 
-                    <Email
-                        email={email}
-                    />
-                </p>
+                <p>Phone Number:</p>
+                <Phone
+                    phone={phone}
+                />
+                <p>Email:</p>
+                <Email
+                    email={email}
+                />
             </SectionWrapper>
             <SectionWrapper>            
                 <H3>Feel free to follow</H3>
