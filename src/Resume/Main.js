@@ -15,9 +15,9 @@ import Skills from './CustomComponents/Skills'
 import Contact from './CustomComponents/Contact'
 import { Nav } from './StyledComponents/Nav'
 
-export default function Resume(props){
+export default function Main(props){
     const [ resume, setResume ] = useState({})
-    const api = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/9'
+    const API = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/9'
     const {
         skills,
         contact_info,
@@ -26,8 +26,9 @@ export default function Resume(props){
         work_experience
     } = resume
 
+
     useEffect(()=>{
-        profileLoader(api,setResume)
+        profileLoader(API,setResume)
       },[])
 
     return(
