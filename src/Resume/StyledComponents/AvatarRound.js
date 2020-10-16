@@ -1,8 +1,7 @@
-import React, { Fragment }from 'react'
 import styled from 'styled-components'
-import { COLORS } from './Colors'
+import { COLORS } from '../Colors'
 
-const AvatarContainer = styled.img`
+const AvatarRound = styled.img`
     display: block;
     height: 195px;
     width: 195px;
@@ -14,15 +13,4 @@ const AvatarContainer = styled.img`
     box-shadow: 11px 8px 11px -2px rgba(0,0,0,0.75);
 `
 
-function Header(props){
-    return(
-        <Fragment>
-            <AvatarContainer
-                src={props.imageUrl}
-                alt="avatar"
-            />
-        </Fragment>
-    )
-}
-
-export default Header;
+export default AvatarRound;

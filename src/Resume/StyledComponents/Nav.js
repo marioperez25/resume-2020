@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { COLORS } from '../Colors'
 
-const Navigation = styled.nav`
+export const Nav = styled.nav`
     background-color: ${COLORS.dark};
     justify-content: center;
     display: flex;
@@ -20,5 +20,3 @@ const Navigation = styled.nav`
         }
     }
 `;
-
-export default Navigation;

@@ -3,7 +3,7 @@ import React, {
     useEffect
 }  from 'react'
 import profileLoader from './Services/profileLoader'
-import Avatar from './CustomComponents/Avatar'
+import Avatar from './Avatar'
 import { HeaderWrapper,
     Name,
     LeftSideContainer,

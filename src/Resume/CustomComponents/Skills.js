@@ -1,8 +1,8 @@
 import React from 'react'
-import SectionWrapper from './StyledComponents/SectionWrapper'
-import UnorderedList from './StyledComponents/UnorderedList'
-import ListItem from './StyledComponents/ListItem'
-import H3 from './StyledComponents/H3'
+import SectionWrapper from '../StyledComponents/SectionWrapper'
+import UnorderedList from '../StyledComponents/UnorderedList'
+import ListItem from '../StyledComponents/ListItem'
+import H3 from '../StyledComponents/H3'
 
 export default function Skills(props){
     

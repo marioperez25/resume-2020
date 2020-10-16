@@ -1,32 +1,43 @@
-import React from 'react'
+import React, {
+    useState,
+    useEffect
+}  from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom"
-import Navigation from './StyledComponents/Navigation'
-import Bio from './Bio'
-import Experience from './Experience'
-import Skills from './Skills'
-import Contact from './Contact'
+import profileLoader from './Services/profileLoader'
+import Bio from './CustomComponents/Bio'
+import Experience from './CustomComponents/Experience'
+import Skills from './CustomComponents/Skills'
+import Contact from './CustomComponents/Contact'
+import { Nav } from './StyledComponents/Nav'
 
 export default function Resume(props){
+    const [ resume, setResume ] = useState({})
+    const api = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/9'
     const {
-        contact_info,
         skills,
+        contact_info,
         devprofiles,
-        work_experience,
-        bio
-    } = props.jsonBin
+        bio,
+        work_experience
+    } = resume
+
+    useEffect(()=>{
+        profileLoader(api,setResume)
+      },[])
+
     return(
         <Router>
             <div>
-                <Navigation>
+                <Nav>
                     <Link to="/">About me</Link>
                     <Link to="/skills">Skills</Link>
                     <Link to="/contact">Contact</Link>
-                </Navigation>
+                </Nav>
                            
                 <Switch>
                 <Route path="/skills">
