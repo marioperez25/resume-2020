@@ -26,7 +26,6 @@ export default function Main(props){
         work_experience
     } = resume
 
-
     useEffect(()=>{
         profileLoader(API,setResume)
       },[])
@@ -38,6 +37,7 @@ export default function Main(props){
                     <Link to="/">About me</Link>
                     <Link to="/skills">Skills</Link>
                     <Link to="/contact">Contact</Link>
+                    
                 </Nav>
                            
                 <Switch>
