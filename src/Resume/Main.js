@@ -8,7 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom"
-import { createStore } from 'redux'
+import store from './Store/configureStore'
 import profileLoader from './Services/profileLoader'
 import Bio from './CustomComponents/Bio'
 import Experience from './CustomComponents/Experience'
@@ -26,44 +26,6 @@ export default function Main(props){
         bio,
         work_experience
     } = resume
-
-    // state:
-    var defaultState = {
-        originAmmount: '0.00'
-    }
-    
-    // reducer:
-    function  ammount(state = defaultState,action){
-        if (action.type === 'INCREMENT') {
-            /* return Object.assign(
-                {},
-                state,
-                { originAmmount : action.data } 
-            ) */
-            return {
-                ...state,
-                originAmmount: action.data
-            }
-        }
-        return state
-    }
-    
-    // store:
-    var store = createStore(ammount);
-
-    // subscribe to updates from the store
-    store.subscribe(
-        function() {
-            // access the state with store.getState()
-            console.log('state', store.getState())
-        }
-    )
-    
-    // dispatch:
-    store.dispatch({
-        type: 'INCREMENT',
-        data: '300.00'
-    })
 
     useEffect(()=>{
         profileLoader(API,setResume)
@@ -83,6 +45,9 @@ export default function Main(props){
                 <Route path="/skills">
                     <Skills
                         skills={skills}
+                        originAmmount={
+                            store.getState().originAmmount
+                        }
                     />
                 </Route>
                 <Route path="/contact">
