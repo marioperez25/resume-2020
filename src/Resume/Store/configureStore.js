@@ -2,7 +2,7 @@ import { createStore } from 'redux'
 
 // store:
 var defaultState = {
-    originAmmount: '0.00'
+    originAmmount: '69.00'
 }
 
 // reducer:

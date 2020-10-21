@@ -1,3 +1,4 @@
+// React:
 import React, {
     useState,
     useEffect
@@ -8,7 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom"
+// State Management:
 import store from './Store/configureStore'
+import { Provider } from 'react-redux'
+// Custom Components:
 import profileLoader from './Services/profileLoader'
 import Bio from './CustomComponents/Bio'
 import Experience from './CustomComponents/Experience'
@@ -32,40 +36,49 @@ export default function Main(props){
       },[])
 
     return(
+        <Provider
+                store={store}
+            >
         <Router>
-            <div>
-                <Nav>
-                    <Link to="/">About me</Link>
-                    <Link to="/skills">Skills</Link>
-                    <Link to="/contact">Contact</Link>
-                    
-                </Nav>
-                           
-                <Switch>
-                <Route path="/skills">
-                    <Skills
-                        skills={skills}
-                        originAmmount={
-                            store.getState().originAmmount
-                        }
-                    />
-                </Route>
-                <Route path="/contact">
-                    <Contact
-                        contact={contact_info}
-                        devprofiles={devprofiles}    
-                    />
-                </Route>
-                <Route path="/">
-                    <Bio
-                        bio={bio}
-                    />
-                    <Experience
-                        jobs={work_experience}
-                    />
-                </Route>
-                </Switch>
-            </div>
-        </Router>
+                <div>
+                    <Nav>
+                        <Link
+                            to="/"
+                        >About me</Link>
+                        <Link
+                            to="/skills"
+                        >Skills</Link>
+                        <Link
+                            to="/contact"
+                        >Contact</Link>
+                    </Nav>
+                            
+                    <Switch>
+                    <Route 
+                        path="/skills">
+                        <Skills
+                            skills={skills}
+                        />
+                    </Route>
+                    <Route 
+                        path="/contact">
+                        <Contact
+                            contact={contact_info}
+                            devprofiles={devprofiles}    
+                        />
+                    </Route>
+                    <Route 
+                        path="/">
+                        <Bio
+                            bio={bio}
+                        />
+                        <Experience
+                            jobs={work_experience}
+                        />
+                    </Route>
+                    </Switch>
+                </div>
+            </Router>
+        </Provider>
     )
 }
