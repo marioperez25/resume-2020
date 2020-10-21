@@ -1,33 +1,31 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga'
-import { helloSaga } from '../Sagas/sagas'
 
-const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// reducers:
+import reducer from '../Reducers/combineReducers'
+
+// sagas:
+// import { helloSaga } from '../Sagas/sagas'
+
+// enhancers composition:
+const devtoolsMiddleware = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const sagaMiddleware = createSagaMiddleware()
-const enhancers = [devtools, applyMiddleware(sagaMiddleware)];
-// store:
+const enhancers = [
+    devtoolsMiddleware,
+    applyMiddleware(sagaMiddleware)
+];
+// default state/store:
 var defaultState = {
-    originAmmount: 69
-}
-
-// reducer:
-function  ammount(state = defaultState,action){
-    if (action.type === 'INCREMENT') {
-        return {
-            ...state,
-            originAmmount: action.data
-        }
-    }
-    return state
 }
 
 // store:
 var store = createStore(
-    ammount,
+    reducer,
     defaultState,
     compose(...enhancers)
 )
 
-sagaMiddleware.run(helloSaga)
+// saga middleware test
+// sagaMiddleware.run(helloSaga)
 
 export default store

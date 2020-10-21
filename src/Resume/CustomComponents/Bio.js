@@ -4,21 +4,27 @@ import SectionWrapper from '../StyledComponents/SectionWrapper'
 import H3 from '../StyledComponents/H3'
 
 export default function Bio(props){
-    const originAmmount = useSelector(state => state.originAmmount)
+    const counter = useSelector(state => state.counter)
     const dispatch = useDispatch()
     return(
             <SectionWrapper>
                 <H3>Biography</H3>
                 <p>{props.bio}</p>
                 <h2>redux state test:</h2>
-                <p>{originAmmount}</p>
+                <p>{counter}</p>
                 <button onClick={() => dispatch(
                     { 
-                        type: 'INCREMENT',
-                        data: originAmmount + 1
+                        type: 'INCREMENT'
                     })
                 }>
                     Increment counter
+                </button>
+                <button onClick={() => dispatch(
+                    { 
+                        type: 'DECREMENT'
+                    })
+                }>
+                    DECREMENT counter
                 </button>
             </SectionWrapper>
     )
