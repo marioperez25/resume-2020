@@ -1,5 +1,7 @@
 import { createStore } from 'redux'
 
+const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 // store:
 var defaultState = {
     originAmmount: 69
@@ -20,7 +22,7 @@ function  ammount(state = defaultState,action){
 var store = createStore(
     ammount,
     defaultState,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    devtools
 )
 
 export default store
