@@ -1,7 +1,9 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga'
 
 const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
+const sagaMiddleware = createSagaMiddleware()
+const enhancers = [devtools, applyMiddleware(sagaMiddleware)];
 // store:
 var defaultState = {
     originAmmount: 69
@@ -22,7 +24,7 @@ function  ammount(state = defaultState,action){
 var store = createStore(
     ammount,
     defaultState,
-    devtools
+    compose(...enhancers)
 )
 
 export default store
