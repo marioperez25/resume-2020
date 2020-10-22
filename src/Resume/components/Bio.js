@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import SectionWrapper from '../StyledComponents/SectionWrapper'
-import H3 from '../StyledComponents/H3'
+import SectionWrapper from '../styled-components//SectionWrapper'
+import H3 from '../styled-components//H3'
 
 export default function Bio(props){
     const counter = useSelector(state => state.counter)
@@ -12,19 +12,17 @@ export default function Bio(props){
                 <p>{props.bio}</p>
                 <h2>redux state test:</h2>
                 <p>{counter}</p>
-                <button onClick={() => dispatch(
-                    { 
+                <button onClick={
+                    () => dispatch({ 
                         type: 'INCREMENT'
                     })
-                }>
-                    Increment counter
+                }>Increment counter
                 </button>
-                <button onClick={() => dispatch(
-                    { 
+                <button onClick={
+                    () => dispatch({ 
                         type: 'DECREMENT'
                     })
-                }>
-                    DECREMENT counter
+                }>Increment counter
                 </button>
             </SectionWrapper>
     )

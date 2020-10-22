@@ -1,8 +1,10 @@
-export default function todos(state = {}, action) {
-    switch (action.type) {
-      case 'FETCH_RESUME':
-        return state
-      default:
-        return state
-    }
+import { RECEIVE_API_DATA } from "../sagas/actions";
+
+export default (state = {}, { type, data }) => {
+  switch (type) {
+    case RECEIVE_API_DATA:
+      return data;
+    default:
+      return state;
   }
+};

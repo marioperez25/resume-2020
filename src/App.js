@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 // import { createStore } from 'redux'
-import Header from './Resume/Header'
-import Main from './Resume/Main'
-import Footer from './Resume/Footer'
+import Header from './resume/Header'
+import Main from './resume/Main'
+import Footer from './resume/Footer'
 import './App.css'
 
 function App() {

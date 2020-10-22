@@ -2,14 +2,14 @@ import React, {
     useState,
     useEffect
 }  from 'react'
-import profileLoader from './Services/profileLoader'
-import Avatar from './CustomComponents/Avatar'
+import profileLoader from './services/profileLoader'
+import Avatar from './components/Avatar'
 import { HeaderWrapper,
     Name,
     LeftSideContainer,
     RightSideContainer,
     Role
-} from './StyledComponents/Header'
+} from './styled-components/Header'
 
 function Header(){
     const GIT_PROFILE_API = 'https://api.github.com/users/marioperez25'

@@ -10,15 +10,15 @@ import {
   Link
 } from "react-router-dom"
 // State Management:
-import store from './Store/configureStore'
+import store from './store/configureStore'
 import { Provider } from 'react-redux'
 // Custom Components:
-import profileLoader from './Services/profileLoader'
-import Bio from './CustomComponents/Bio'
-import Experience from './CustomComponents/Experience'
-import Skills from './CustomComponents/Skills'
-import Contact from './CustomComponents/Contact'
-import { Nav } from './StyledComponents/Nav'
+import profileLoader from './services/profileLoader'
+import Bio from './components/Bio'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
+import { Nav } from './styled-components//Nav'
 
 export default function Main(props){
     const [ resume, setResume ] = useState({})
@@ -32,7 +32,7 @@ export default function Main(props){
     } = resume
 
     useEffect(()=>{
-        profileLoader(API,setResume)
+        profileLoader(API,setResume);
       },[])
 
     return(

@@ -9,7 +9,7 @@ import { HeaderWrapper,
     LeftSideContainer,
     RightSideContainer,
     Role
-} from './StyledComponents/Header'
+} from './styled-components/Header'
 
 function Header(){
     const GIT_PROFILE_API = 'https://api.github.com/users/marioperez25'
