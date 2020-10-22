@@ -18,7 +18,8 @@ import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-import { Nav } from './styled-components//Nav'
+import ThemeToggle from './components/ThemeToggle'
+import { Nav } from './styled-components/Nav'
 
 export default function Main(props){
     const [ resume, setResume ] = useState({})
@@ -51,6 +52,8 @@ export default function Main(props){
                         <Link
                             to="/contact"
                         >Contact</Link>
+
+                        <ThemeToggle/>
                     </Nav>
                             
                     <Switch>

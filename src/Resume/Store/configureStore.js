@@ -5,7 +5,7 @@ import createSagaMiddleware from 'redux-saga'
 import reducers from '../reducers/combineReducers'
 
 // sagas:
-import sagas from '../sagas/sagas'
+//import sagas from '../sagas/sagas'
 
 // enhancers composition:
 const devtoolsMiddleware = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -27,6 +27,6 @@ var store = createStore(
 )
 
 // then run the saga
-sagaMiddleware.run(sagas)
+//sagaMiddleware.run(sagas)
 
 export default store
