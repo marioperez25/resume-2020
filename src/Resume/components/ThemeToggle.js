@@ -5,13 +5,16 @@ import { COLORS } from '../Colors'
 
 const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
     height: fit-content;
     width:  fit-content;
     position: fixed;
     top: 0;
     button {
+        font-weight: bold;
+        font-size: 14px;
         background-color: ${COLORS.lightBlue};
-        color: ${COLORS.dark}
+        color: ${COLORS.dark};
         border-radius: 3px;
         border: 1px solid ${COLORS.lightBlue};
         margin: 1px;
