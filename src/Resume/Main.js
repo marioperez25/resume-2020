@@ -9,16 +9,12 @@ import {
   Route,
   Link
 } from "react-router-dom"
-// State Management:
-import store from './store/configureStore'
-import { Provider } from 'react-redux'
 // Custom Components:
 import profileLoader from './services/profileLoader'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-import ThemeToggle from './components/ThemeToggle'
 import { Nav } from './styled-components/Nav'
 
 export default function Main(props){
@@ -37,9 +33,7 @@ export default function Main(props){
       },[])
 
     return(
-        <Provider
-                store={store}
-            >
+        <div>
         <Router>
                 <div>
                     <Nav>
@@ -52,8 +46,6 @@ export default function Main(props){
                         <Link
                             to="/contact"
                         >Contact</Link>
-
-                        <ThemeToggle/>
                     </Nav>
                             
                     <Switch>
@@ -82,6 +74,6 @@ export default function Main(props){
                     </Switch>
                 </div>
             </Router>
-        </Provider>
+        </div>
     )
 }

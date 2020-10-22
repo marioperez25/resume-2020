@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
-// import { createStore } from 'redux'
+import store from './resume/store/configureStore'
+import { Provider } from 'react-redux'
 import Header from './resume/Header'
 import Main from './resume/Main'
 import Footer from './resume/Footer'
@@ -9,9 +10,13 @@ function App() {
 
   return (
     <Fragment>
-      <Header/>
+      <Provider
+          store={store}
+      >
+        <Header/>
         <Main/>
-      <Footer/>
+        <Footer/>
+      </Provider>
     </Fragment>
   );
 }

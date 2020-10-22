@@ -4,21 +4,22 @@ import styled from 'styled-components'
 import { COLORS } from '../Colors'
 
 const Wrapper = styled.div`
-    display: block;
+    display: flex;
     height: fit-content;
     width:  fit-content;
-    backgroun-color: white;
-
+    position: fixed;
+    top: 0;
     button {
         background-color: ${COLORS.lightBlue};
+        color: ${COLORS.dark}
         border-radius: 3px;
         border: 1px solid ${COLORS.lightBlue};
         margin: 1px;
-        color: white;
         &:disabled {
             background-color: ${COLORS.dark};
+            color: ${COLORS.lightBlue};
             border-radius: 3px;
-            border: 1px solid ${COLORS.dark};
+            border: 1px solid ${COLORS.lightBlue};
         }
     }
 `
