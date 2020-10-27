@@ -21,7 +21,7 @@ export default function Contact(props){
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"            
-            >{profile.name}</a>
+            >{profile.name.toUpperCase()}</a>
         </ListItem>
     ) : []
 
