@@ -2,7 +2,7 @@ import React, {
     useState,
     useEffect
 }  from 'react'
-import profileLoader from './Services/profileLoader'
+import profileLoader from './effects/profileLoader'
 import Avatar from './components/Avatar'
 import { HeaderWrapper,
     Name,

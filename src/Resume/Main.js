@@ -12,8 +12,8 @@ import {
 // Redux:
 import { useDispatch } from 'react-redux'
 // Custom Components:
-import isDaytime from './Services/isDaytime'
-import profileLoader from './Services/profileLoader'
+import isDaytime from './effects/isDaytime'
+import profileLoader from './effects/profileLoader'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
