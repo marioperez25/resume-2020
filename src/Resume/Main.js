@@ -56,7 +56,7 @@ export default function Main(){
                     <Nav>
                         <Link
                             to="/"
-                        >About me</Link>
+                        >About</Link>
                         <Link
                             to="/skills"
                         >Skills</Link>
