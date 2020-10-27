@@ -37,11 +37,11 @@ export default function ContactForm() {
   return (
     <Form className="contact-form" onSubmit={sendEmail}>
       <input type="hidden" name="contact_number" />
-      <label>Nombre:</label>
+      <label>Name:</label>
       <input type="text" name="user_name" />
-      <label>Correo Electronico:</label>
+      <label>Email:</label>
       <input type="email" name="user_email" />
-      <label>Su consulta:</label>
+      <label>Comment:</label>
       <textarea name="message" />
       <input type="submit" value="Send" />
     </Form>

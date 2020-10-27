@@ -11,7 +11,8 @@ export default function Experience(props){
         (job,index) => 
             <ListItem
                 key={index}
-            >{job.company_name} | {yearOf(job.entry_date)} - {yearOf(job.exit_date) || "Current"} : {job.experience_summary}
+            >
+                <strong>{job.company_name} | {yearOf(job.entry_date)} - {yearOf(job.exit_date) || "Current"}</strong> {job.experience_summary}
             </ListItem>
     ) : []
 
