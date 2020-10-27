@@ -20,7 +20,7 @@ function Header(){
     } = gitAPI;
 
     useEffect(()=>{
-      profileLoader(GIT_PROFILE_API,setgitAPI)
+      profileLoader(GIT_PROFILE_API,setgitAPI,'gitAPI')
     },[])
 
     return(

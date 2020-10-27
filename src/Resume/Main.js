@@ -12,23 +12,26 @@ import {
 // Redux:
 import { useDispatch } from 'react-redux'
 // Custom Components:
-import profileLoader from './Services/profileLoader'
 import isDaytime from './Services/isDaytime'
+import profileLoader from './Services/profileLoader'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import { Nav } from './styled-components/Nav'
 
-export default function Main(props){
+export default function Main(){
+    
     const [ resume, setResume ] = useState({})
+
     const API = 'https://api.jsonbin.io/b/5f84d311302a837e95789669/9'
+
     const {
         skills,
         contact_info,
         devprofiles,
         bio,
-        work_experience
+        work_experience,
     } = resume
     const dispatch = useDispatch()
 
@@ -39,11 +42,11 @@ export default function Main(props){
     }
 
     useEffect(() => {
-        profileLoader(API,setResume)
+        dayTimeEffect()
     },[])
 
     useEffect(() => {
-        dayTimeEffect()
+        profileLoader(API,setResume,'JSONresume')
     },[])
 
     return(
