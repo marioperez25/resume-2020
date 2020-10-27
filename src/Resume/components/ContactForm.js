@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components'
+import { COLORS } from '../Colors'
 
 const Form = styled.form`
     display: flex;
@@ -9,7 +10,10 @@ const Form = styled.form`
         border-radius: 5px;
     }
     input[type=submit] {
-        margin-top: 20px
+        margin-top: 20px;
+        color: ${COLORS.lightBlue};
+        font-weight: bold;
+        background-color: ${COLORS.dark};
     }
 `;
 
