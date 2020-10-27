@@ -2,9 +2,8 @@ import React, {
     useState,
     useEffect
 }  from 'react'
-import profileLoader from './services/profileLoader'
+import profileLoader from './Services/profileLoader'
 import Avatar from './components/Avatar'
-import ThemeToggle from './components/ThemeToggle'
 import { HeaderWrapper,
     Name,
     LeftSideContainer,
@@ -26,7 +25,6 @@ function Header(){
 
     return(
         <HeaderWrapper>
-            <ThemeToggle/>
             <LeftSideContainer>
                 <Name>{name 
                     ? name

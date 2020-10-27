@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import store from './resume/store/configureStore'
+import store from './resume/Store/configureStore'
 import { Provider } from 'react-redux'
 import Header from './resume/Header'
 import Main from './resume/Main'

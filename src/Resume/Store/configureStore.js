@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga'
 
 // reducers:
-import reducers from '../reducers/combineReducers'
+import reducers from '../Reducers/combineReducers'
 
 // sagas:
 //import sagas from '../sagas/sagas'

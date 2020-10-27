@@ -9,8 +9,11 @@ import {
   Route,
   Link
 } from "react-router-dom"
+// Redux:
+import { useDispatch } from 'react-redux'
 // Custom Components:
-import profileLoader from './services/profileLoader'
+import profileLoader from './Services/profileLoader'
+import isDaytime from './Services/isDaytime'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
@@ -27,14 +30,25 @@ export default function Main(props){
         bio,
         work_experience
     } = resume
+    const dispatch = useDispatch()
 
-    useEffect(()=>{
-        profileLoader(API,setResume);
-      },[])
+    function dayTimeEffect(){
+        let daytime = isDaytime();
+        daytime ? dispatch({type: 'SET_REACT_THEME'})
+        : dispatch({type: 'SET_REDUX_THEME'})
+    }
+
+    useEffect(() => {
+        profileLoader(API,setResume)
+    },[])
+
+    useEffect(() => {
+        dayTimeEffect()
+    },[])
 
     return(
         <div>
-        <Router>
+            <Router>
                 <div>
                     <Nav>
                         <Link
@@ -73,7 +87,7 @@ export default function Main(props){
                     </Route>
                     </Switch>
                 </div>
-            </Router>
+            </Router> 
         </div>
     )
 }
