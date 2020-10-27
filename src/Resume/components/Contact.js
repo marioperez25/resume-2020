@@ -3,6 +3,7 @@ import SectionWrapper from '../styled-components//SectionWrapper'
 import UnorderedList from '../styled-components//UnorderedList'
 import ListItem from '../styled-components//ListItem'
 import H3 from '../styled-components//H3'
+import ContactForm from './ContactForm'
 import Phone from './Phone'
 import Email from './Email'
 
@@ -38,11 +39,15 @@ export default function Contact(props){
                 />
             </SectionWrapper>
             <SectionWrapper>            
+                <H3>Write me:</H3>
+                <ContactForm/>
+            </SectionWrapper>
+            <SectionWrapper>            
                 <H3>Feel free to follow</H3>
                 <UnorderedList>
                     {profiles}
                 </UnorderedList>
-        </SectionWrapper>
+            </SectionWrapper>
         </Fragment>
     )
 
