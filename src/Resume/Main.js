@@ -17,7 +17,7 @@ import profileLoader from './effects/profileLoader'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
-import Contact from './components/Contact'
+import Contact from './components/contact/Contact'
 import { Nav } from './styled-components/Nav'
 
 export default function Main(){
