@@ -10,9 +10,9 @@ import {
   Link
 } from "react-router-dom"
 // Redux:
-import { useDispatch } from 'react-redux'
+//import { useDispatch } from 'react-redux'
 // Custom Components:
-import isDaytime from './effects/isDaytime'
+//import isDaytime from './effects/isDaytime'
 import profileLoader from './effects/profileLoader'
 import Bio from './components/Bio'
 import Experience from './components/Experience'
@@ -33,9 +33,9 @@ export default function Main(){
         bio,
         work_experience,
     } = resume
-    const dispatch = useDispatch()
+    //const dispatch = useDispatch()
 
-    function dayTimeEffect(){
+    /*     function dayTimeEffect(){
         let daytime = isDaytime();
         daytime ? dispatch({type: 'SET_REACT_THEME'})
         : dispatch({type: 'SET_REDUX_THEME'})
@@ -43,7 +43,7 @@ export default function Main(){
 
     useEffect(() => {
         dayTimeEffect()
-    },[])
+    },[]) */
 
     useEffect(() => {
         profileLoader(API,setResume,'JSONresume')

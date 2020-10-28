@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import store from './resume/store/configureStore'
 import { Provider } from 'react-redux'
-import Header from './resume/Header'
+import Header from './resume/components/header/Header'
 import Main from './resume/Main'
 import Footer from './resume/Footer'
 import './App.css'

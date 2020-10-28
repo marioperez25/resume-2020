@@ -1,6 +1,6 @@
 import React, { Fragment }from 'react'
-import AvatarPlaceholder from '../styled-components/AvatarPlaceholder'
-import AvatarRound from '../styled-components/AvatarRound'
+import AvatarPlaceholder from './AvatarPlaceholder'
+import AvatarRound from './AvatarRound'
 
 function Header(props){
     return(

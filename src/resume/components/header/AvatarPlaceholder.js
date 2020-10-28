@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS } from '../Colors'
+import { COLORS } from '../../Colors'
 
 const AvatarPlaceholder = styled.span`
     display: block;
