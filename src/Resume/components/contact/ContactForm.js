@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import sendEmail from '../../effects/sendEmail'
 import styled from 'styled-components'
 import { COLORS } from '../../Colors'
 
-const Form = styled.form`
+const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     input {
@@ -27,7 +27,6 @@ export default function ContactForm() {
   
   const [ username , setUsername] = useState('')
   const [ email , setEmail] = useState('')
-  const [ contactnumber , setContactnumber] = useState('')
   const [ message , setMessage] = useState('')
   const [ readyForSubmission , setReadyForSubmission] = useState(true)
 
@@ -41,9 +40,6 @@ export default function ContactForm() {
       case 'email':
         setEmail(value)
         break;
-      case 'contactnumber':
-        setContactnumber(value)
-        break;
       case 'message':
         setMessage(value)
         break;
@@ -54,37 +50,16 @@ export default function ContactForm() {
     const allFieldsHaveData = (
       username.length > 0
       && email.length > 0
-      && contactnumber.length > 0
       && message.length  > 0 )
 
     setReadyForSubmission(!allFieldsHaveData)
   }
 
-  const sendEmail = (e)=> {
-    const config = {
-        user: 'user_uXU56LmOHaHkOLvHbqxMa',
-        serviceId: 'mario-perez',
-        templateId: 'template_0o9tj48'
-    } 
-
-    e.preventDefault();
-    emailjs.sendForm(
-        config.serviceId,
-        config.templateId,
-        e.target,
-        config.user)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  }
-
   return (
-    <Form className="contact-form" onSubmit={sendEmail}>
+    <FormWrapper className="contact-form" onSubmit={sendEmail}>
 
       <label 
-        for="username">Name:</label>
+        htmlFor="username">Name:</label>
       <input
         id="username"
         onChange={formInputHandler} 
@@ -93,25 +68,16 @@ export default function ContactForm() {
         name="user_name" />
 
       <label 
-        for="email">Email:</label>
+        htmlFor="email">Email:</label>
       <input 
         id="email"
         onChange={formInputHandler} 
         value={email}
         type="email"
         name="user_email" />
-      
-      <label 
-        for="contactnumber">Contact Number:</label>
-      <input
-        id="contactnumber"
-        onChange={formInputHandler} 
-        value={contactnumber}
-        type="text"
-        name="contact_number" />
 
       <label
-        for="message">Comment:</label>
+        htmlFor="message">Comment:</label>
       <textarea
         id="message"
         onChange={formInputHandler} 
@@ -123,6 +89,6 @@ export default function ContactForm() {
         type="submit"
         value="Send" />
 
-    </Form>
+    </FormWrapper>
   );
 }
